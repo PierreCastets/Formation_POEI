@@ -12,7 +12,12 @@ print("*** EXO 1: chiffre mystère à deviner ***")
 guess_number = 42
 
 # votre code ici
-num = int(input("Saisir un nombre: "))
+try:
+    num = int(input("Saisir un nombre: "))
+except:
+    print("L'entrée doit être un nombre!")
+    exit()
+
 if num > guess_number:
     print("c'est moins")
 elif num < guess_number:
