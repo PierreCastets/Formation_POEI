@@ -35,7 +35,7 @@ password += random.choice(digits)
 
 allCaracters = alphabet_lower + alphabet_upper + specials + digits
 
-for type in range(length-4):
+for _ in range(length-4):
     password += random.choice(allCaracters)
 
 password_list = list(password)

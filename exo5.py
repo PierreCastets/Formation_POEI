@@ -20,7 +20,9 @@ except:
 flagsList = os.listdir("flags")
 
 for file in flagsList:
-    newName = file[:2].upper() + ".png"
-    shutil.copy("flags/" + file, "flagsBis/" + newName)
+    if not file.startswith('missing'):
+        newName = file[:2].upper() + ".png"
+        shutil.copy("flags/" + file, "flagsBis/" + newName)
+
 print("Liste des fichiers dans 'flags': ",os.listdir("flags"))
 print("Liste des fichiers dans 'flagsBis': ",os.listdir("flagsBis"))
