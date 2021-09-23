@@ -24,6 +24,8 @@ with open("deniro.csv", "r") as file:
         if int(line[0]) <= 2010 and int(line[0]) >= 2000:
             countMovies += 1
 
-print("Le film le mieux noté de Deniro est:", bestMovie)
-print("Deniro a fait", countMovies, "entre 2000 et 2010")
+final = open("deniro-report.txt", "w")
+final.write("Le film le mieux noté de Deniro est: %s \n" % bestMovie)
+final.write("Deniro a fait %s films entre 2000 et 2010 \n" % countMovies)
+final.close()
     
